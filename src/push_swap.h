@@ -6,7 +6,7 @@
 /*   By: yubi42 <yubi42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:25:45 by jborner           #+#    #+#             */
-/*   Updated: 2023/07/22 21:12:51 by yubi42           ###   ########.fr       */
+/*   Updated: 2023/07/23 22:11:56 by yubi42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ int					error_handler(int argc, char **argv, t_handler *data);
 void				init_data(t_handler *data);
 void				init_moves(t_moves *moves);
 void				init_it(t_it_info *it);
-void				init_new_node(t_node *new_node, long *array, int i);
+void				init_new_node(t_node **new_node, long *array, int i);
 void				init_sizes(t_size_array *sizes, t_it_info *it,
 						t_handler *data);
 
@@ -126,7 +126,7 @@ void				big_sort_handler(t_handler *data);
 
 void				sort_wrong_start(t_handler *data, int checker_a,
 						int checker_b, t_moves *moves);
-int					check_order_a(t_node *head, int array_size);
+int					check_order_a(t_node *head, int array_size, int total_size);
 int					check_order_b(t_node *head, int array_size);
 void				small_handler(t_handler *data);
 void				sort_handler(t_handler *data);
